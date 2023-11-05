@@ -1,3 +1,4 @@
+import 'package:bookly/Features/home/presentaion/views/widgets/book_rating.dart';
 import 'package:bookly/constants.dart';
 import 'package:bookly/core/utils/assets.dart';
 import 'package:bookly/core/utils/styles.dart';
@@ -29,8 +30,7 @@ class BestSellerViewItem extends StatelessWidget {
           const SizedBox(
             width: 30,
           ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width * .5,
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -53,15 +53,18 @@ class BestSellerViewItem extends StatelessWidget {
                     height: 3,
                   ),
                   Row(
-                    children: [
-                      Text(
-                        '19.99',
-                        style: Styles.textStyle20.copyWith(
-                          fontWeight: FontWeight.bold
-                        ),  
-                      )
-                  ]
-                )
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '19.99',
+                          style: Styles.textStyle20.copyWith(
+                            fontWeight: FontWeight.bold
+                          ),  
+                        ),
+                        // const Spacer(),
+                        const BookRating()
+                    ]
+                  ),
               ]
             ),
           )
