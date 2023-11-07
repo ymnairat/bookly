@@ -2,6 +2,7 @@ import 'package:bookly/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 abstract class Styles {
+  //create static variable to access it without create an object
   static const textStyle18 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w600,
@@ -27,4 +28,5 @@ abstract class Styles {
   );
 }
 
+//This is an global variable we can use it instead of static variable
 const TextStyle textStyle = TextStyle();
