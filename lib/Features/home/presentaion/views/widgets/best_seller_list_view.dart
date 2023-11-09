@@ -7,16 +7,15 @@ class BestSellerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: EdgeInsets.zero,
-      //shrinkWrap: true, //This make list view take it's children height and can remove it when use SliverFillRemaining
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return const Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          child: BestSellerViewItem(),
-        );
-      }
-      );
+        padding: EdgeInsets.zero,
+        //shrinkWrap: true, //This make list view take it's children height and can remove it when use SliverFillRemaining
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const Padding(
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: BestSellerViewItem(),
+          );
+        });
   }
 }

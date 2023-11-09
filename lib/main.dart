@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 void main() {
   runApp(const BooklyApp());
 }
+
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
 
@@ -16,10 +17,8 @@ class BooklyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: kPrimaryColor,
-          textTheme:
-              GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
+        textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       ),
     );
   }
 }
-
