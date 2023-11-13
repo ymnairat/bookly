@@ -16,7 +16,7 @@ class BookEntity {
   @HiveField(5)
   final num? rating;
 
-  BookEntity(
+  BookEntity(kFeaturedBox, 
       {required this.bookId,
       required this.authorName,
       required this.image,
