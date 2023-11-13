@@ -11,7 +11,8 @@ class ServerFailure extends Failure
 {
   ServerFailure(super.message);
   
-  factory ServerFailure.fromDioError(DioException e) {
+  // ignore: deprecated_member_use
+  factory ServerFailure.fromDioError(DioError e) {
     switch(e.type) {
       case DioExceptionType.connectionTimeout:
         return ServerFailure('Connection timeout with ApiServer');

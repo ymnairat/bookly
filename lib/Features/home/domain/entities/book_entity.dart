@@ -16,11 +16,14 @@ class BookEntity {
   @HiveField(5)
   final num? rating;
 
-  BookEntity(kFeaturedBox, 
-      {required this.bookId,
-      required this.authorName,
-      required this.image,
-      required this.price,
-      required this.rating,
-      required this.title});
+  BookEntity( 
+      {
+        required this.bookId,
+        required this.authorName,
+        required this.image,
+        required this.price,
+        required this.rating,
+        required this.title
+      }
+    );
 }

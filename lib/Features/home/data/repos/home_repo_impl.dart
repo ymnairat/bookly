@@ -28,8 +28,11 @@ class HomeRepoImpl extends HomeRepo
       books = await homeRemoteDataSource.fetchFeaturedBooks();
       return right(books);
     } catch (e) {
-      if(e is DioException) {
+      // ignore: deprecated_member_use
+      if(e is DioError) {
         return left(ServerFailure.fromDioError(e));
+      } else {
+        return left(ServerFailure(e.toString()));
       }
     }
   }
