@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class SimilerBooksListView extends StatelessWidget {
   const SimilerBooksListView({super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -14,7 +14,9 @@ class SimilerBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return const Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.0),
-              child: CustomBookImage(),
+              child: CustomBookImage(
+                image: ''
+              ),
             );
           }),
     );
